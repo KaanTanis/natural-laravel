@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 | Web Routes - VOGO
 |--------------------------------------------------------------------------
 */
-
+Route::get('/', [PageController::class, 'home'])->name('home');
 
 Route::get('s/{id}/{type?}/{slug?}', [PageController::class, 'page'])->name('page');
 

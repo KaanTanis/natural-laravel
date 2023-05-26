@@ -45,4 +45,9 @@ class PageController extends Controller
 
         return view('page', compact('data'));
     }
+
+    public function home()
+    {
+        return \view('home');
+    }
 }
