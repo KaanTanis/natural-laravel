@@ -117,12 +117,12 @@
 
 
 <section id="footer" class="bg-brown">
-    <div class="grid grid-cols-3 container mx-auto relative">
+    <div class="grid grid-cols-3 container mx-auto relative py-12">
         <div>
-            <img width="140" src="/logo-light.png" alt="">
+            <img width="190" src="/logo-light.png" alt="">
         </div>
         <div>
-            <ul>
+            <ul class="text-natural-brown-2 font-newOrderRegular">
                 <li>ANA SAYFA</li>
                 <li>KURUMSAL</li>
                 <li>ÜRÜNLERİMİ</li>
@@ -132,10 +132,10 @@
             </ul>
         </div>
         <div>
-            <ul>
-                <li>Çilek Mah. 6394 Sk. No:4 Akdeniz / MERSİN</li>
-                <li>natural@naturalgida.com.tr</li>
-                <li>+90 324 221 37 87</li>
+            <ul class="text-natural-brown-2 font-newOrderRegular">
+                <li class="mb-3">Çilek Mah. 6394 Sk. No:4 Akdeniz / MERSİN</li>
+                <li class="mb-3">natural@naturalgida.com.tr</li>
+                <li class="mb-3">+90 324 221 37 87</li>
             </ul>
         </div>
     </div>

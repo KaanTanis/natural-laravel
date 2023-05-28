@@ -163,7 +163,7 @@
                 </span>
             </div>
 
-            <div class="">
+            <div class="h-[36rem] pt-12">
                 <img class="float-right h-full object-contain" src="/img/info-bg.png" alt="">
             </div>
         </div>
@@ -265,50 +265,8 @@
 </section>
 
 
-
-
-
-{{--<section id="explore" class="h-[34rem]">--}}
-{{--    <div class="flex justify-center mt-44 -left-32 relative">--}}
-{{--        <div class="absolute -mt-72 left-32 overflow-hidden"--}}
-{{--             style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">--}}
-{{--            <span class="" style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important;">--}}
-{{--                ürünlerürünler--}}
-{{--            </span>--}}
-{{--        </div>--}}
-{{--        <div class="absolute flex right-0">--}}
-{{--            <x-bx-right-arrow-alt class="w-32 bold text-brown"></x-bx-right-arrow-alt>--}}
-{{--        </div>--}}
-{{--        <div style="font-size: 64px" class="text-5xl -right-24 -top-4 relative text-brown font-newOrderBold">--}}
-{{--            <p class="mb-4" style="letter-spacing: 2px">pirinç ve</p>--}}
-{{--            <p style="letter-spacing: 2px">bakliyat</p>--}}
-{{--        </div>--}}
-{{--        <img class="w-96" src="/explore.png" alt="">--}}
-{{--        <div class="relative ml-8 mb-6">--}}
-{{--            <ul class="bottom-0 absolute font-newOrderBold inline-block w-max text-brown">--}}
-{{--                <li>kırmızı mercimek</li>--}}
-{{--                <li>nohut</li>--}}
-{{--                <li>fasulye</li>--}}
-{{--                <li>bulgur</li>--}}
-{{--                <li>yeşil mercimek</li>--}}
-{{--                <li>pirinç</li>--}}
-{{--            </ul>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-
 <style>
-    .chef-overlay:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        mix-blend-mode: multiply;
-        background-color: #93C25D;
-        border-radius: 20px;
-    }
+
 </style>
 
 <section id="chef" class="mt-24 mb-24">
@@ -322,19 +280,39 @@
 </section>
 
 <section>
-    <div class="flex justify-center mt-44 relative">
-        <div class="absolute -mt-72 overflow-hidden"
-             style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">
+    <div class="flex mt-44 relative container mx-auto mb-36 w-full">
+        <div class="absolute -mt-24 overflow-hidden inline-size-webkit-available -z-20 text-[430px]">
             <span class="" style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important;">
-                ürünlerürünler
+                yemektarifleri
             </span>
         </div>
 
-        <div class="grid grid-cols-4 gap4">
-            <div class="h-64 w-32 bg-natural-green"></div>
-            <div class="h-64 w-32 bg-natural-green"></div>
-            <div class="h-64 w-32 bg-natural-green"></div>
-            <div class="h-64 w-32 bg-natural-green"></div>
+        <div class="flex gap-9 flex-nowrap whitespace-nowrap">
+            <div class="h-80 w-48 bg-natural-green rounded-full relative">
+                <span class="font-newOrderRegular absolute -top-12 text-center w-full">içli köfte</span>
+                <img class="object-cover h-full rounded-full" src="/foods/kofte.png" alt="">
+            </div>
+
+            <div class="h-80 w-48 mt-24 bg-natural-green rounded-full relative">
+                <span class="font-newOrderRegular absolute -top-12 text-center w-full">kısır</span>
+                <img class="object-cover h-full rounded-full" src="/foods/kisir.png" alt="">
+            </div>
+
+            <div class="h-80 w-48 bg-natural-green rounded-full relative">
+                <span class="font-newOrderRegular absolute -top-12 text-center w-full">kuru fasulye</span>
+                <img class="object-cover h-full rounded-full" src="/foods/fasulye.png" alt="">
+            </div>
+
+            <div class="h-80 w-48 mt-24 bg-natural-green rounded-full relative">
+                <span class="font-newOrderRegular absolute -top-12 text-center w-full">pilav</span>
+                <img class="object-cover h-full rounded-full" src="/foods/pilav.png" alt="">
+            </div>
+
+            <div class="h-80 w-48 bg-natural-green rounded-full relative">
+                <span class="font-newOrderRegular absolute -top-12 text-center w-full">mercimek çorbası</span>
+                <img class="object-cover h-full rounded-full" src="/foods/corba.png" alt="">
+            </div>
+
         </div>
     </div>
 </section>

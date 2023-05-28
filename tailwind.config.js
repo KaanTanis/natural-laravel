@@ -54,7 +54,9 @@ module.exports = {
                 "natural-brown": '#A07D74',
                 "natural-brown-light": '#FFF4E9',
                 "natural-orange": '#FBA059',
-                "natural-green": '#93C25D'
+                "natural-green": '#93C25D',
+                "natural-brown-2": '#DFC2B2',
+                "natural-brown-dark": '#4A3733',
             },
             fontFamily: {
                 sans: ['DM Sans', ...defaultTheme.fontFamily.sans],

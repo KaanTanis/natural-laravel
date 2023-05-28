@@ -4,3 +4,25 @@ body {
 .webkit-center {
     text-align: -webkit-center;
 }
+.inline-size-webkit-available {
+    inline-size: -webkit-fill-available;
+}
+.chef-overlay:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: inherit;
+    background-color: #689733;
+    border-radius: 20px;
+    opacity: 85%;
+}
+.fulltext {
+    @apply text-8xl text-brown mt-32 mb-32;
+    font-family: "New Order Bold";
+}
+.fulltext span {
+    font-family: "New Order Regular";
+}
