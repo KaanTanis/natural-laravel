@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <section id="hero" class="container mx-auto h-[36rem] bg-fixed bg-center bg-no-repeat bg-cover mb-36 rounded-2xl " style="background-image: url(/hero.jpg);">
-            <div>
-            </div>
+    <section id="hero" class="hero container mx-auto h-[36rem]
+                bg-no-repeat bg-cover mb-36 rounded-2xl "
+             style="background-image: url(/hero.jpg); background-position: bottom center">
     </section>
 
     <section class="container mx-auto">
@@ -15,7 +15,7 @@
             </div>
 
             <div class="px-28">
-                <img src="/detail_1.png" alt="">
+                <img data-aos="zoom-out-left" src="/detail_1.png" alt="">
             </div>
         </div>
     </section>
@@ -24,7 +24,7 @@
         <div class="grid grid-cols-2">
             <div class="px-28">
                 <!-- todo 3 farklı görsel olacak -->
-                <img src="/detail_2.png" alt="">
+                <img data-aos="fade-up" src="/detail_2.png" alt="">
             </div>
             <div class="font-newOrderRegular px-28 py-56 text-natural-brown-dark">
                 Buğday; un, yem üretilmesinde kullanılan temel bir besin maddesidir.

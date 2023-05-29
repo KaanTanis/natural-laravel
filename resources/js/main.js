@@ -38,3 +38,13 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+document.addEventListener('scroll', function () {
+    let scroll = window.scrollY;
+
+    // hero effect
+    let hero = document.querySelector('.hero');
+    hero.style.backgroundPositionY = scroll / 4 + 'px';
+
+
+})
