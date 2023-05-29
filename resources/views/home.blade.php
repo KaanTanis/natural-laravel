@@ -137,6 +137,22 @@
             </div>
         </div>
     </div>
+
+    <div class="h-96 relative grid grid-cols-2">
+        <div class="bg-natural-wine relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <img class="w-56" src="/img/tane.png" alt="">
+                <span class="text-lg text-natural-white font-newOrderBold">su cilası</span>
+            </div>
+        </div>
+
+        <div class="bg-natural-white relative">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+                <img class="w-56" src="/img/tane.png" alt="">
+                <span class="text-lg text-natural-wine font-newOrderBold">orta cila</span>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="info">

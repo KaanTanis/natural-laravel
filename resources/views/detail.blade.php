@@ -50,4 +50,23 @@
         </div>
     </section>
 
+
+    <section class="container mx-auto">
+        <div class="grid grid-cols-2">
+            <div class="col-span-2">
+                <ul>
+                    <li>Protein ve karbonhidrat içerir.</li>
+                    <li>B vitamini içerir</li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 text-right">
+                <ul>
+                    <li>Protein ve karbonhidrat içerir.</li>
+                    <li>B vitamini içerir</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
 @endsection
