@@ -26,3 +26,15 @@ body {
 .fulltext span {
     font-family: "New Order Regular";
 }
+
+.fulltext {
+    animation: fulltext 10s infinite linear;
+}
+@keyframes fulltext {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

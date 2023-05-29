@@ -37,7 +37,7 @@
     <section class="">
         <div class="w-full p-4 flex items-center justify-center overflow-x-hidden scroll-snap-type-x mandatory scroll-snap-align-center">
             <span class="font-inter font-bold w-full text-center whitespace-nowrap">
-              <div class="fulltext -ml-16">buğdayınözellikleri<span>buğdayınözellikleri</span></div>
+              <div class="fulltext">buğdayınözellikleri<span>buğdayınözellikleri</span></div>
             </span>
         </div>
     </section>
