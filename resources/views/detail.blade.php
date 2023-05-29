@@ -35,9 +35,16 @@
     </section>
 
     <section class="">
-        <div class="w-full p-4 flex items-center justify-center overflow-x-hidden scroll-snap-type-x mandatory scroll-snap-align-center">
-            <span class="font-inter font-bold w-full text-center whitespace-nowrap">
-              <div class="fulltext">buğdayınözellikleri<span>buğdayınözellikleri</span></div>
+        <div class="w-full p flex items-center justify-center overflow-x-hidden scroll-snap-type-x mandatory scroll-snap-align-center">
+            <span class="font-inter font-bold w-full text-center whitespace-nowrap wrapper">
+              <div class="fulltext">
+                  <!-- todo: fixme -->
+                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
+                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
+                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
+                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
+                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
+              </div>
             </span>
         </div>
     </section>

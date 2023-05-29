@@ -28,13 +28,13 @@ body {
 }
 
 .fulltext {
-    animation: fulltext 10s infinite linear;
+    animation: fulltext 50s infinite linear;
 }
 @keyframes fulltext {
     from {
         transform: translateX(0%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-500%);
     }
 }
