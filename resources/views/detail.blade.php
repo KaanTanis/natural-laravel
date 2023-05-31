@@ -15,7 +15,7 @@
             </div>
 
             <div class="px-28">
-                <img data-aos="zoom-out-left" src="/detail_1.png" alt="">
+                <img data-aos="fade-up" src="/detail_1.png" alt="">
             </div>
         </div>
     </section>
@@ -24,7 +24,10 @@
         <div class="grid grid-cols-2">
             <div class="px-28">
                 <!-- todo 3 farklı görsel olacak -->
-                <img data-aos="fade-up" src="/detail_2.png" alt="">
+                <img
+                    data-aos-duration="600"
+                    data-aos-anchor-placement="center-bottom"
+                    data-aos="fade-up" style="width: 100%" src="/detail_2.png" alt="">
             </div>
             <div class="font-newOrderRegular px-28 py-56 text-natural-brown-dark">
                 Buğday; un, yem üretilmesinde kullanılan temel bir besin maddesidir.
@@ -62,7 +65,9 @@
         <div class="grid grid-cols-2">
             <div class="col-span-2">
                 <ul>
-                    <li>Protein ve karbonhidrat içerir.</li>
+                    <li>
+                        <img src="/icon1.png" alt="">
+                        Protein ve karbonhidrat içerir.</li>
                     <li>B vitamini içerir</li>
                 </ul>
             </div>
