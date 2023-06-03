@@ -119,11 +119,11 @@
 
 
 <section id="footer" class="bg-brown">
-    <div class="grid grid-cols-3 container mx-auto relative py-12">
-        <div>
+    <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-3 container mx-auto relative py-12">
+        <div class="justify-self-center mb-5">
             <img width="190" src="/logo-light.png" alt="">
         </div>
-        <div>
+        <div class="mb-5">
             <ul class="text-natural-brown-2 font-newOrderRegular">
                 <li>ANA SAYFA</li>
                 <li>KURUMSAL</li>

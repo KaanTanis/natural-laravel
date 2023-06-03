@@ -155,30 +155,30 @@
 
 <section id="info">
 
-    <div class="h-[36rem] bg-brown relative">
-        <div class="grid grid-cols-2">
-            <div class="flex justify-center h-[36rem] align-middle items-center">
+    <div class="md:h-[36rem] bg-brown relative h-[30rem]">
+        <div class="grid grid-cols-4 middle-info">
+            <div class="flex justify-center md:h-[36rem] p-2 md:p-0 h-[30rem] align-middle items-center md:col-start-1 md:col-span-2 col-span-3">
                 <span class="font-newOrderBold text-center">
                     <span class="text-natural-orange text-5xl">"</span>
-                    <p class="text-5xl text-natural-brown-light">
+                    <p class="md:text-5xl text-3xl text-natural-brown-light">
                         kırmızı mercimeği <br>
                         kim keşfetti?
                     </p>
-                    <p class="text-natural-brown text-sm px-40 pt-6 font-newOrderRegular">
+                    <p class="text-natural-brown text-sm md:px-40 px-10 pt-6 font-newOrderRegular">
                         Kırmızı Mercimek, yoksul bir çiftçi ailesinin kızı olan Asurlu Akubu tarafından
                         yaklaşık 3900-4000 sene önce keşfedilmiştir.
                     </p>
                     <div class="mt-8">
                         <a href="javascript:;" class="bg-natural-brown-light hover:bg-natural-brown hover:text-natural-brown-light rounded-xl py-4 px-8
                             text-natural-brown ">
-                            devamını Oku
+                            devamını oku
                         </a>
                     </div>
                 </span>
             </div>
 
-            <div class="h-[36rem] pt-12">
-                <img class="float-right h-full object-contain" src="/img/info-bg.png" alt="">
+            <div class="md:h-[36rem] h-[30rem] pt-12 absolute right-0 overflow-hidden middle-info--bg">
+                <img class="float-right h-full object-contain relative" src="/img/info-bg.png" alt="">
             </div>
         </div>
     </div>
@@ -191,18 +191,18 @@
         <div class="w-full relative flex items-center justify-center">
             <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                 <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-1000">
-                    <div class="flex flex-shrink-0 relative w-full sm:w-auto px-28 py-20">
+                    <div class="flex flex-shrink-0 relative w-full sm:w-auto md:px-28 md:py-20">
                         <div class="flex justify-start mt-44 w-screen">
-                            <div class="absolute -mt-72 left-32 overflow-hidden"
-                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">
-                            </div>
+{{--                            <div class="absolute md:-mt-72 -mt-12 md:left-32 overflow-hidden"--}}
+{{--                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">--}}
+{{--                            </div>--}}
 
-                            <div style="font-size: 64px" class="text-5xl -right-24 -top-4 relative text-brown font-newOrderBold">
-                                <p class="mb-4" style="letter-spacing: 2px">pirinç ve</p>
+                            <div style="font-size: 64px" class="md:text-5xl z-10 text-3xl md:-right-24 right-0 -top-4 relative text-brown font-newOrderBold">
+                                <p class="mb-8 md:mb-4" style="letter-spacing: 2px">pirinç ve</p>
                                 <p style="letter-spacing: 2px">bakliyat</p>
                             </div>
-                            <img class="w-96" src="/explore.png" alt="">
-                            <div class="relative ml-8 mb-6">
+                            <img class="w-96 relative -left-52 md:-left-0" src="/explore.png" alt="">
+                            <div class="relative ml-8 mb-6 hidden md:block">
                                 <ul class="bottom-0 absolute font-newOrderBold inline-block w-max text-brown">
                                     <li>kırmızı mercimek</li>
                                     <li>nohut</li>
@@ -213,17 +213,18 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="flex justify-start mt-44 w-screen">
-                            <div class="absolute -mt-72 left-32 overflow-hidden"
-                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">
-                            </div>
 
-                            <div style="font-size: 64px" class="text-5xl -right-24 -top-4 relative text-brown font-newOrderBold">
-                                <p class="mb-4" style="letter-spacing: 2px">pirinç ve</p>
+                        <div class="flex justify-start mt-44 w-screen ml-32">
+                            {{--                            <div class="absolute md:-mt-72 -mt-12 md:left-32 overflow-hidden"--}}
+                            {{--                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">--}}
+                            {{--                            </div>--}}
+
+                            <div style="font-size: 64px" class="md:text-5xl z-10 text-3xl md:-right-24 right-0 -top-4 relative text-brown font-newOrderBold">
+                                <p class="mb-8 md:mb-4" style="letter-spacing: 2px">pirinç ve</p>
                                 <p style="letter-spacing: 2px">bakliyat</p>
                             </div>
-                            <img class="w-96" src="/explore.png" alt="">
-                            <div class="relative ml-8 mb-6">
+                            <img class="w-96 relative -left-52 md:-left-0" src="/explore.png" alt="">
+                            <div class="relative ml-8 mb-6 hidden md:block">
                                 <ul class="bottom-0 absolute font-newOrderBold inline-block w-max text-brown">
                                     <li>kırmızı mercimek</li>
                                     <li>nohut</li>
@@ -250,7 +251,7 @@
                     </div>
                 </div>
             </div>
-            <button aria-label="slide forward" class="absolute z-30 right-44 mr-10 top-[16rem]
+            <button aria-label="slide forward" class="absolute top-10 right-0 z-30 md:right-44 md:mr-10 md:top-[16rem]
                 text-brown" id="next">
                 <x-bx-right-arrow-alt class="w-24 text-brown"></x-bx-right-arrow-alt>
             </button>

@@ -38,3 +38,15 @@ body {
         transform: translateX(-500%);
     }
 }
+
+.middle-info .middle-info--bg > img {
+    width: calc(100% + 9rem);
+    right: -9rem
+}
+
+@media screen and (max-width: 480px) {
+    .middle-info .middle-info--bg > img {
+        width: calc(38% + 9rem);
+        right: -9rem
+    }
+}
