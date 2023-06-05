@@ -4,18 +4,17 @@
 
     <section id="hero" class="hero container mx-auto h-[14rem] md:h-[36rem]
                 bg-no-repeat bg-cover mb-36 rounded-2xl "
-             style="background-image: url(/hero.jpg); background-position: bottom center">
+             style="background-image: url({{ Storage::url($product->_get('banner')) }}); background-position: bottom center">
     </section>
 
     <section class="container mx-auto">
         <div class="grid grid-cols-2 items-center">
             <div class="font-newOrderRegular md:px-28 px-4 py-4 md:py-8 text-natural-brown-dark">
-                Buğday (Triticum), buğdaygiller (Poaceae) ailesinden bütün dünyada ıslahı yapılmış tek yıllık otsu bir bitkidir.
-                Karasal iklimi tercih eder. Mısır ile birlikte dünya çapında ikinci en fazla ekimi yapılan tahıldır.
+                {{ $product->_get('field_1') }}
             </div>
 
             <div class="md:px-28 px-4">
-                <img data-aos="fade-up" src="/detail_1.png" alt="">
+                <img data-aos="fade-up" src="{{ Storage::url($product->_get('field_1_img')) }}" alt="">
             </div>
         </div>
     </section>
@@ -27,12 +26,10 @@
                 <img
                     data-aos-duration="600"
                     data-aos-anchor-placement="center-bottom"
-                    data-aos="fade-up" style="width: 100%" src="/detail_2.png" alt="">
+                    data-aos="fade-up" style="width: 100%" src="{{ Storage::url($product->_get('field_2_img')) }}" alt="">
             </div>
             <div class="font-newOrderRegular md:px-28 px-4 py-4 md:py-56 text-natural-brown-dark">
-                Buğday; un, yem üretilmesinde kullanılan temel bir besin maddesidir.
-                Kabuğu ayrılabileceği gibi kabuğu ile de öğütülebilir. Buğday aynı zamanda çiftlik hayvanları için
-                bir yem maddesi olarak da yetiştirilmektedir. Hasattan sonra atık ürün olarak saman balyası çıkar.
+                {{ $product->_get('field_2') }}
             </div>
         </div>
     </section>
@@ -42,11 +39,9 @@
             <span class="font-inter font-bold w-full text-center whitespace-nowrap wrapper">
               <div class="fulltext text-6xl">
                   <!-- todo: fixme -->
-                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
-                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
-                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
-                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
-                  BUĞDAYIN ÖZELLİKLERİ<span> BUĞDAYIN ÖZELLİKLERİ</span>
+                  @for($i = 0; $i < 5; $i++)
+                      {{ \Illuminate\Support\Str::upper($product->_get('title')) . ' ' .  __('ÖZELLİKLERİ') }} <span> {{ \Illuminate\Support\Str::upper($product->_get('title')) . ' ' .  __('ÖZELLİKLERİ') }}</span>
+                  @endfor
               </div>
             </span>
         </div>
@@ -54,42 +49,31 @@
 
 
     <section class="container mx-auto">
-        <div class="grid grid-cols-2">
-            <div class="col-span-2">
-                <ul class="p-3 md:p-0">
-                    <li class="items-center flex mb-4">
-                        <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
-                            <img class="" style="width: 23px" src="/icon1.png" alt="">
-                        </div>
-                        <span class="font-newOrderRegular tracking-wider">Protein ve karbonhidrat içerir.</span>
-                    </li>
+        <div class="">
 
-                    <li class="items-center flex mb-4">
-                        <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
-                            <img class="" style="width: 23px" src="/icon1.png" alt="">
-                        </div>
-                        <span class="font-newOrderRegular tracking-wider">B Vitamini içerir.</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-span-2 p-3 md:p-0">
-                <ul class="float-right">
-                    <li class="items-center flex mb-4">
-                        <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
-                            <img class="" style="width: 23px" src="/icon1.png" alt="">
-                        </div>
-                        <span class="font-newOrderRegular tracking-wider">
-                            Protein ve karbonhidrat içerir
-                        </span>
-                    </li>
-
-                    <li class="items-center flex mb-4">
-                        <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
-                            <img class="" style="width: 23px" src="/icon1.png" alt="">
-                        </div>
-                        <span class="font-newOrderRegular tracking-wider">B Vitamini içerir.</span>
-                    </li>
+            <div class="">
+                <ul class="p-3 md:p-0 grid grid-cols-2">
+                    @foreach(array_chunk($product->fields['properties'], 2, true) as $prop)
+                        @if($loop->iteration %2 == 0)
+                            @foreach($prop as $p)
+                                <li class="items-center flex mb-4 col-span-2 col-start-2">
+                                    <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
+                                        <img class="" style="width: 23px" src="{{ Storage::url($p['icon']) }}" alt="">
+                                    </div>
+                                    <span class="font-newOrderRegular tracking-wider">{{ $p['text'] }}</span>
+                                </li>
+                            @endforeach
+                            @else
+                            @foreach($prop as $p)
+                                <li class="items-center flex mb-4 justify-start col-span-2 col-start-1">
+                                    <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
+                                        <img class="" style="width: 23px" src="{{ Storage::url($p['icon']) }}" alt="">
+                                    </div>
+                                    <span class="font-newOrderRegular tracking-wider">{{ $p['text'] }}</span>
+                                </li>
+                            @endforeach
+                        @endif
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -106,10 +90,10 @@
                 bg-no-repeat bg-cover mb-36 rounded-2xl mt-36
                 justify-center flex items-center relative
                 "
-             style="background-image: url(/hero.jpg); background-position: bottom center">
+             style="background-image: url({{ Storage::url($product->_get('alt_banner_img')) }}); background-position: bottom center">
         <div class="webkit-center">
-            <p class="bg-brown text-white font-newOrderLight p-4 block w-fit rounded-2xl">DÜNYA NÜFUSUNUN YARISINDAN FAZLASI İÇİN</p>
-            <p class="bg-brown text-white font-newOrderLight p-4 block w-fit rounded-2xl -mt-4">BÜYÜK ÖNEM TAŞIR</p>
+            <p style="background-color: {{ $product->_get('alt_banner_color') }}" class=" text-white font-newOrderLight p-4 block w-fit rounded-2xl">{{ $product->_get('alt_banner_text_1') }}</p>
+            <p style="background-color: {{ $product->_get('alt_banner_color') }}" class=" text-white font-newOrderLight p-4 block w-fit rounded-2xl -mt-4">{{ $product->_get('alt_banner_text_2') }}</p>
         </div>
     </section>
 

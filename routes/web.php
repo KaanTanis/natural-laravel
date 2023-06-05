@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::get('/', [PageController::class, 'home'])->name('home');
-Route::get('/detay', [PageController::class, 'detail'])->name('detail');
+Route::get('/urunler/{id}/{slug?}', [PageController::class, 'detail'])->name('detail');
 
 Route::get('s/{id}/{type?}/{slug?}', [PageController::class, 'page'])->name('page');
 

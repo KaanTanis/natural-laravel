@@ -25,7 +25,7 @@ return [
     |
     */
 
-    'path' => env('FILAMENT_PATH', 'vogo'),
+    'path' => env('FILAMENT_PATH', 'admin'),
 
     /*
     |--------------------------------------------------------------------------
@@ -237,7 +237,7 @@ return [
             'have_inline_labels' => true,
         ],
         'footer' => [
-            'should_show_logo' => true,
+            'should_show_logo' => false,
         ],
         'max_content_width' => null,
         'notifications' => [

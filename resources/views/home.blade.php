@@ -215,10 +215,6 @@
                         </div>
 
                         <div class="flex justify-start mt-44 w-screen ml-32">
-                            {{--                            <div class="absolute md:-mt-72 -mt-12 md:left-32 overflow-hidden"--}}
-                            {{--                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">--}}
-                            {{--                            </div>--}}
-
                             <div style="font-size: 64px" class="md:text-5xl z-10 text-3xl md:-right-24 right-0 -top-4 relative text-brown font-newOrderBold">
                                 <p class="mb-8 md:mb-4" style="letter-spacing: 2px">pirinç ve</p>
                                 <p style="letter-spacing: 2px">bakliyat</p>
@@ -285,11 +281,11 @@
 </style>
 
 <section id="chef" class="mt-24 mb-24">
-    <div class="relative container mx-auto">
-        <div class="rounded-[20px] h-96 bg-fixed bg-center bg-no-repeat bg-cover chef-overlay" style="background-image: url(/chef.jpg)">
+    <div class="relative container mx-auto h-[48rem] bg-teal-100 recipe">
+        <div class="rounded-[20px] h-[26rem] bg-fixed bg-center bg-no-repeat bg-cover chef-overlay" style="background-image: url(/chef.jpg)">
         </div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-            <span class="text-6xl text-white font-newOrderRegular">yemek tarifleri</span>
+        <div class="absolute top-28 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center recipe--text">
+            <span class="text-6xl text-white font-newOrderRegular relative">yemek tarifleri</span>
         </div>
     </div>
 </section>

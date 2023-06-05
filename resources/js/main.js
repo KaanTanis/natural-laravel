@@ -45,6 +45,12 @@ document.addEventListener('scroll', function () {
     // hero effect
     let hero = document.querySelector('.hero');
     hero.style.backgroundPositionY = scroll / 4 + 'px';
-
-
 })
+
+// home recipe
+document.addEventListener('DOMContentLoaded', function () {
+    let recipe = document.getElementsByClassName('recipe');
+    let recipeHeight = recipe.style.height
+    console.log(recipeHeight);
+})
+

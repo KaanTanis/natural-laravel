@@ -51,8 +51,18 @@ class PageController extends Controller
         return \view('home');
     }
 
-    public function detail()
+    public function detail($id, $slug = null)
     {
-        return \view('detail');
+        $product = Post::query()->where('type', 'product')->where('id', $id)->first();
+
+        if ($slug == null) {
+            return redirect()->route('detail', [
+                'id' => $id,
+                'slug' => Str::slug($product->_get('title')),
+            ])->setStatusCode(301);
+        }
+
+
+        return \view('detail', compact('product'));
     }
 }
