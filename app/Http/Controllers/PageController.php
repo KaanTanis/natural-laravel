@@ -53,7 +53,7 @@ class PageController extends Controller
 
     public function detail($id, $slug = null)
     {
-        $product = Post::query()->where('type', 'product')->where('id', $id)->first();
+        $product = Post::query()->where('type', 'product')->where('id', $id)->firstOrFail();
 
         if ($slug == null) {
             return redirect()->route('detail', [

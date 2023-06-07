@@ -123,28 +123,28 @@
     </div>
 
     <div class="relative grid grid-cols-2">
-        <div class="bg-natural-white relative h-96">
+        <div class="bg-natural-white relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                 <img class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-wine font-newOrderBold">az yağlı</span>
             </div>
         </div>
 
-        <div class="bg-natural-wine relative h-96">
+        <div class="bg-natural-wine relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                 <img class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-white font-newOrderBold">çok cilalı</span>
             </div>
         </div>
 
-        <div class="bg-natural-wine relative h-96">
+        <div class="bg-natural-wine relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                 <img class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-white font-newOrderBold">su cilası</span>
             </div>
         </div>
 
-        <div class="bg-natural-white relative h-96">
+        <div class="bg-natural-white relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
                 <img class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-wine font-newOrderBold">orta cila</span>
@@ -286,6 +286,10 @@
         </div>
         <div class="absolute top-28 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center recipe--text">
             <span class="text-6xl text-white font-newOrderRegular relative">yemek tarifleri</span>
+        </div>
+
+        <div>
+            aşama v2
         </div>
     </div>
 </section>

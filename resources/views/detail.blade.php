@@ -13,7 +13,7 @@
                 {{ $product->_get('field_1') }}
             </div>
 
-            <div class="md:px-28 px-4">
+            <div class="md:px-22 px-4">
                 <img data-aos="fade-up" src="{{ Storage::url($product->_get('field_1_img')) }}" alt="">
             </div>
         </div>
@@ -56,7 +56,7 @@
                     @foreach(array_chunk($product->fields['properties'], 2, true) as $prop)
                         @if($loop->iteration %2 == 0)
                             @foreach($prop as $p)
-                                <li class="items-center flex mb-4 col-span-2 col-start-2">
+                                <li class="items-center flex mb-4 col-span-2 md:col-start-2">
                                     <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
                                         <img class="" style="width: 23px" src="{{ Storage::url($p['icon']) }}" alt="">
                                     </div>

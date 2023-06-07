@@ -85,8 +85,10 @@ class ProductResource extends Resource
                         Forms\Components\Repeater::make('fields.properties')
                             ->label(__('Özellikler'))
                             ->hint(__('En iyi görünrü için 4 adet özellik ekleyiniz.'))
+                            ->columns(2)
                             ->schema([
                                 Forms\Components\FileUpload::make('icon')
+                                    ->imagePreviewHeight('40')
                                     ->label(__('İkon')),
                                 Forms\Components\TextInput::make('text')
                                     ->label(__('Metin')),
@@ -99,6 +101,7 @@ class ProductResource extends Resource
                                 Forms\Components\TextInput::make('fields.alt_banner_text_2.'.$lang)
                                     ->label(__('Yazı ikinci satır')),
                                 Cropper::make('fields.alt_banner_img')
+                                    ->modalSize('md')
                                     ->label(__('Görsel')),
                                 Forms\Components\ColorPicker::make('fields.alt_banner_color')
                                     ->label(__('Yazı Arkaplan Rengi')),
