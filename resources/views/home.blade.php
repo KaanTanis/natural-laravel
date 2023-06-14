@@ -2,7 +2,7 @@
 
 @section('content')
 <section id="home_banner" class="md:flex block md:justify-around mt-12 container mx-auto">
-        <div class="md:m-auto justify-center md:justify-start flex">
+        <div class="md:m-auto justify-center md:justify-start md:flex hidden">
             <ul class="flex mb-2">
                 <li class="flex md:block gap-2">
                     <a href="" class="rounded-full border block border-brown-500/25 hover:bg-brown-300 hover:text-white justify-center text-center p-2 md:mb-2">
@@ -280,50 +280,50 @@
 
 </style>
 
-<section id="chef" class="mt-24 mb-24">
-    <div class="relative container mx-auto h-[48rem] bg-teal-100 recipe">
-        <div class="rounded-[20px] h-[26rem] bg-fixed bg-center bg-no-repeat bg-cover chef-overlay" style="background-image: url(/chef.jpg)">
-        </div>
-        <div class="absolute top-28 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center recipe--text">
-            <span class="text-6xl text-white font-newOrderRegular relative">yemek tarifleri</span>
-        </div>
+<section id="" class="
+        home-recipe-hero
+        bg-natural-green
+        container mx-auto h-[14rem] md:h-[30rem] md:mb-36 mb-12 px-3 md:px-0 mt-8 relative">
 
-        <div>
-            aşama v2
-        </div>
+    <img class="w-full hero mix-blend-multiply" src="/chef.jpg" alt="">
+
+    <div class="
+            md:text-7xl text-4xl font-newOrderBold text-white
+            absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        yemek tarifleri
     </div>
 </section>
 
 <section>
     <div class="flex mt-44 relative container mx-auto mb-36 w-full">
-        <div class="absolute -mt-24 overflow-hidden inline-size-webkit-available -z-20 text-[430px]">
+        <div class="absolute -mt-24 overflow-hidden -z-20 text-[430px]">
             <span class="" style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important;">
                 yemektarifleri
             </span>
         </div>
 
-        <div class="flex gap-9 flex-nowrap whitespace-nowrap">
-            <div class="h-80 w-48 bg-natural-green rounded-full relative">
+        <div class="gap-9 grid grid-cols-5 flex-nowrap whitespace-nowrap">
+            <div class="h-96 bg-natural-green rounded-full relative">
                 <span class="font-newOrderRegular absolute -top-12 text-center w-full">içli köfte</span>
                 <img class="object-cover h-full rounded-full" src="/foods/kofte.png" alt="">
             </div>
 
-            <div class="h-80 w-48 mt-24 bg-natural-green rounded-full relative">
+            <div class="h-96 mt-24 bg-natural-green rounded-full relative">
                 <span class="font-newOrderRegular absolute -top-12 text-center w-full">kısır</span>
                 <img class="object-cover h-full rounded-full" src="/foods/kisir.png" alt="">
             </div>
 
-            <div class="h-80 w-48 bg-natural-green rounded-full relative">
+            <div class="h-96 bg-natural-green rounded-full relative">
                 <span class="font-newOrderRegular absolute -top-12 text-center w-full">kuru fasulye</span>
                 <img class="object-cover h-full rounded-full" src="/foods/fasulye.png" alt="">
             </div>
 
-            <div class="h-80 w-48 mt-24 bg-natural-green rounded-full relative">
+            <div class="h-96 mt-24 bg-natural-green rounded-full relative">
                 <span class="font-newOrderRegular absolute -top-12 text-center w-full">pilav</span>
                 <img class="object-cover h-full rounded-full" src="/foods/pilav.png" alt="">
             </div>
 
-            <div class="h-80 w-48 bg-natural-green rounded-full relative">
+            <div class="h-96 bg-natural-green rounded-full relative">
                 <span class="font-newOrderRegular absolute -top-12 text-center w-full">mercimek çorbası</span>
                 <img class="object-cover h-full rounded-full" src="/foods/corba.png" alt="">
             </div>

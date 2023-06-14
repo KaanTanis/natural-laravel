@@ -39,18 +39,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-document.addEventListener('scroll', function () {
-    let scroll = window.scrollY;
+// document.addEventListener('scroll', function () {
+//     let scroll = window.scrollY;
+//
+//     // hero effect
+//     let hero = document.querySelector('.hero');
+//     hero.style.backgroundPositionY = scroll / 4 + 'px';
+// })
 
-    // hero effect
-    let hero = document.querySelector('.hero');
-    hero.style.backgroundPositionY = scroll / 4 + 'px';
-})
+// details page
+let hero = document.getElementsByClassName('hero');
+new simpleParallax(hero);
 
-// home recipe
-document.addEventListener('DOMContentLoaded', function () {
-    let recipe = document.getElementsByClassName('recipe');
-    let recipeHeight = recipe.style.height
-    console.log(recipeHeight);
-})
+let bottom_hero = document.getElementsByClassName('bottom-hero');
+new simpleParallax(bottom_hero, {
+    orientation: 'down'
+});
 
