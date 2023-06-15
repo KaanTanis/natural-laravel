@@ -289,6 +289,7 @@
 
     <div class="
             md:text-7xl text-4xl font-newOrderBold text-white
+            overflow-hidden
             absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         yemek tarifleri
     </div>
@@ -296,10 +297,8 @@
 
 <section>
     <div class="flex mt-44 relative container mx-auto mb-36 w-full">
-        <div class="absolute -mt-24 overflow-hidden -z-20 text-[430px]">
-            <span class="" style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important;">
-                yemektarifleri
-            </span>
+        <div class="absolute -mt-24 -left-32 overflow-hidden -z-20 text-[430px]" style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important; inline-size: -webkit-fill-available;">
+            yemektarifleri
         </div>
 
         <div class="gap-9 grid grid-cols-5 flex-nowrap whitespace-nowrap">

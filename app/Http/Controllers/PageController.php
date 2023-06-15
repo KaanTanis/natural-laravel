@@ -65,4 +65,9 @@ class PageController extends Controller
 
         return \view('detail', compact('product'));
     }
+
+    public function products()
+    {
+        return \view('products');
+    }
 }

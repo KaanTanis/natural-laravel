@@ -36,7 +36,7 @@
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
         <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('ANA SAYFA') }}</a></li>
         <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('KURUMSAL') }}</a></li>
-        <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('ÜRÜNLERİMİZ') }}</a></li>
+        <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="{{ route('products') }}">{{ __('ÜRÜNLERİMİZ') }}</a></li>
         <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('YEMEK TARİFLERİ') }}</a></li>
         <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('TESİSİMİZ') }}</a></li>
         <li><a class="text-sm text-brown font-newOrderLight hover:font-bold duration-200" href="#">{{ __('İLETİŞİM') }}</a></li>
