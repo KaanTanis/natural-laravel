@@ -68,6 +68,10 @@ class PageController extends Controller
 
     public function products()
     {
-        return \view('products');
+        $productCategories = Post::query()
+            ->where('type', 'product_category')
+            ->get();
+
+        return \view('products', compact('productCategories'));
     }
 }

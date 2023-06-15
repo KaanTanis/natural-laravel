@@ -53,6 +53,14 @@ class ProductResource extends Resource
                             ->label(__('Başlık'))
                             ->required(fn() => $lang == 'tr'),
 
+                        Forms\Components\Select::make('fields.category_id')
+                            ->options(function () {
+                                return Post::query()->where('type', 'product_category')
+                                    ->get()
+                                    ->pluck('fields.title.' . app()->getLocale(), 'id');
+                            })
+                            ->label(__('Kategori')),
+
                         Cropper::make('fields.banner')
                             ->enableImageRotation()
                             ->rotationalStep(5)

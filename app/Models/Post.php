@@ -63,4 +63,12 @@ class Post extends Model
             ->orderBy('order')
             ->get();
     }
+
+    public function products()
+    {
+        return $this->where('type', 'product')
+            ->where('fields->category_id', $this->id)
+            ->orderBy('order')
+            ->get();
+    }
 }
