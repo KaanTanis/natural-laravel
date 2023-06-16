@@ -43,7 +43,9 @@
         " href="{{ route('products') }}">{{ __('ÜRÜNLERİMİZ') }}</a></li>
         <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('YEMEK TARİFLERİ') }}</a></li>
         <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('TESİSİMİZ') }}</a></li>
-        <li><a class="text-sm text-brown font-newOrderLight hover:font-bold duration-200" href="#">{{ __('İLETİŞİM') }}</a></li>
+        <li><a class="text-sm text-brown hover:font-bold duration-200
+               {{ request()->routeIs('contact') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
+        " href="{{ route('contact') }}">{{ __('İLETİŞİM') }}</a></li>
     </ul>
     <a class="hidden lg:inline-block lg:ml-auto py-2 px-2 text-sm font-newOrderBold text-brown rounded-xl transition duration-200"
        href="#">TR</a>

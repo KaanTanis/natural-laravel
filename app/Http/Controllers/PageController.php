@@ -74,4 +74,9 @@ class PageController extends Controller
 
         return \view('products', compact('productCategories'));
     }
+
+    public function contact()
+    {
+        return \view('contact');
+    }
 }
