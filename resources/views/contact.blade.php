@@ -38,10 +38,40 @@
                         </div>
                     </div>
                 </div>
-
-
-
             </form>
         </div>
+    </section>
+
+    <section class="container mx-auto mb-24">
+        <div class="grid md:grid-cols-5 gap-4">
+            <div class="md:col-start-2 font-newOrderRegular webkit-center">
+                <x-heroicon-s-location-marker class="w-8 text-brown"></x-heroicon-s-location-marker>
+                <p class="mt-4 text-brown font-newOrderRegular text-[13px]">
+                    Çilek Mah. 6394 Sk. No:4
+                    <br>
+                    Akdeniz / MERSİN
+                </p>
+            </div>
+
+            <div class="font-newOrderRegular webkit-center">
+                <x-heroicon-s-phone class="w-8 text-brown"></x-heroicon-s-phone>
+                <p class="mt-4 text-brown font-newOrderRegular text-[13px]">
+                    +90 324 221 37 87
+                </p>
+            </div>
+
+            <div class="font-newOrderRegular webkit-center">
+                <x-heroicon-s-mail class="w-8 text-brown"></x-heroicon-s-mail>
+                <p class="mt-4 text-brown font-newOrderRegular text-[13px]">
+                    natural@naturalgida.com.tr
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8397.990369786949!2d34.67060632704815!3d36.83213861616474!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1527f1f00c1ba03d%3A0xd590cff25c0296af!2sNatural%20G%C4%B1da!5e0!3m2!1str!2str!4v1686918905904!5m2!1str!2str"
+                width="100%" height="450"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 @endsection

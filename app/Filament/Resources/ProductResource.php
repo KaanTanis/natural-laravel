@@ -76,8 +76,8 @@ class ProductResource extends Resource
                             ->schema([
                                 Forms\Components\Textarea::make('fields.field_1.'.$lang)
                                     ->label(__('Yazı')),
-                                Cropper::make('fields.field_1_img')
-                                    ->modalSize('md')
+
+                                Forms\Components\FileUpload::make('fields.field_1_img')
                                     ->label(__('Görsel')),
                             ]),
 
@@ -85,8 +85,8 @@ class ProductResource extends Resource
                             ->schema([
                                 Forms\Components\Textarea::make('fields.field_2.'.$lang)
                                     ->label(__('Yazı')),
-                                Cropper::make('fields.field_2_img')
-                                    ->modalSize('md')
+
+                                Forms\Components\FileUpload::make('fields.field_2_img')
                                     ->label(__('Görsel')),
                             ]),
 
@@ -152,9 +152,21 @@ class ProductResource extends Resource
                             ->orderBy('fields->title', $direction);
                     })
                     ->label(__('Başlık')),
+
+                Tables\Columns\TextColumn::make('fields.category_id')
+                    ->formatStateUsing(function ($record) {
+                        return Post::query()->where('type', 'product_category')->find($record->fields['category_id'])
+                            ->fields['title'][app()->getLocale()];
+                    })
             ])->defaultSort('order')->reorderable('order')
             ->filters([
-                //
+                Tables\Filters\SelectFilter::make('fields->category_id')
+                    ->options(function () {
+                        return Post::query()->where('type', 'product_category')
+                            ->get()
+                            ->pluck('fields.title.' . app()->getLocale(), 'id');
+                    })
+                    ->label(__('Kategori')),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

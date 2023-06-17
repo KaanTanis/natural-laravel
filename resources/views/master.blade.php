@@ -125,7 +125,7 @@
 
 
 <section id="footer" class="bg-brown">
-    <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-3 container mx-auto relative py-12">
+    <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-3 container mx-auto relative py-24 px-12">
         <div class="justify-self-center mb-5">
             <img width="190" src="/logo-light.png" alt="">
         </div>
