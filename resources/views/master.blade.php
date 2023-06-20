@@ -34,16 +34,16 @@
         </button>
     </div>
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-        <li><a class="text-sm text-brown px-2 hover:font-bold duration-200
+        <li><a class="text-xs text-brown px-2 hover:font-bold duration-200
             {{ request()->routeIs('home') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="/">{{ __('ANA SAYFA') }}</a></li>
-        <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('KURUMSAL') }}</a></li>
-        <li><a class="text-sm text-brown  px-2 hover:font-bold duration-200
+        <li><a class="text-xs text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('KURUMSAL') }}</a></li>
+        <li><a class="text-xs text-brown  px-2 hover:font-bold duration-200
             {{ request()->routeIs('detail') || request()->routeIs('products') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="{{ route('products') }}">{{ __('ÜRÜNLERİMİZ') }}</a></li>
-        <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('YEMEK TARİFLERİ') }}</a></li>
-        <li><a class="text-sm text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('TESİSİMİZ') }}</a></li>
-        <li><a class="text-sm text-brown hover:font-bold duration-200
+        <li><a class="text-xs text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('YEMEK TARİFLERİ') }}</a></li>
+        <li><a class="text-xs text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('TESİSİMİZ') }}</a></li>
+        <li><a class="text-xs text-brown hover:font-bold duration-200
                {{ request()->routeIs('contact') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="{{ route('contact') }}">{{ __('İLETİŞİM') }}</a></li>
     </ul>
@@ -83,24 +83,24 @@
         <div>
             <ul>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs rounded"
+                    <a class="block p-4 font-newOrderRegular text-sm rounded"
                        href="#">{{ __('ANA SAYFA') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs font-newOrderRegular  rounded"
+                    <a class="block p-4 font-newOrderRegular text-sm rounded"
                        href="#">{{ __('KURUMSAL') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs text-brown rounded"
+                    <a class="block p-4 font-newOrderRegular text-sm text-brown rounded"
                        href="#">{{ __('ÜRÜNLERİMİZ') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs text-brown rounded"
+                    <a class="block p-4 font-newOrderRegular text-sm text-brown rounded"
                        href="#">{{ __('YEMEK TARİFLERİ') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs text-brown rounded"
-                       href="#">{{ __('İLETİŞİM') }}</a>
+                    <a class="block p-4 font-newOrderRegular text-sm text-brown rounded"
+                       href="#">{{ __('İLETİŞİM2') }}</a>
                 </li>
             </ul>
         </div>
