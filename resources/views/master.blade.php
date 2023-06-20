@@ -34,16 +34,16 @@
         </button>
     </div>
     <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-        <li><a class="text-xs text-brown px-2 hover:font-bold duration-200
+        <li><a class="text-sm text-brown px-1 duration-200
             {{ request()->routeIs('home') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="/">{{ __('ANA SAYFA') }}</a></li>
-        <li><a class="text-xs text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('KURUMSAL') }}</a></li>
-        <li><a class="text-xs text-brown  px-2 hover:font-bold duration-200
+        <li><a class="text-sm text-brown font-newOrderLight px-1 duration-200" href="#">{{ __('KURUMSAL') }}</a></li>
+        <li><a class="text-sm text-brown  px-1 duration-200
             {{ request()->routeIs('detail') || request()->routeIs('products') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="{{ route('products') }}">{{ __('ÜRÜNLERİMİZ') }}</a></li>
-        <li><a class="text-xs text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('YEMEK TARİFLERİ') }}</a></li>
-        <li><a class="text-xs text-brown font-newOrderLight px-2 hover:font-bold duration-200" href="#">{{ __('TESİSİMİZ') }}</a></li>
-        <li><a class="text-xs text-brown hover:font-bold duration-200
+        <li><a class="text-sm text-brown font-newOrderLight px-1 duration-200" href="#">{{ __('YEMEK TARİFLERİ') }}</a></li>
+        <li><a class="text-sm text-brown font-newOrderLight px-1 duration-200" href="#">{{ __('TESİSİMİZ') }}</a></li>
+        <li><a class="text-sm text-brown duration-200
                {{ request()->routeIs('contact') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="{{ route('contact') }}">{{ __('İLETİŞİM') }}</a></li>
     </ul>
