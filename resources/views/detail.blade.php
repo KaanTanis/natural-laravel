@@ -80,7 +80,7 @@
                                 <li class="items-center flex mb-4 col-span-2 md:col-start-2" data-aos="fade-up"
                                     data-aos-duration="{{ $duration += $duration }}">
                                     <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
-                                        <img class="" style="width: 23px" src="{{ Storage::url($p['icon']) }}" alt="">
+                                        <img class="" style="width: 23px; height: 23px; object-fit: contain !important;" src="{{ Storage::url($p['icon']) }}" alt="">
                                     </div>
                                     <span class="font-newOrderRegular tracking-wider">{{ $p['text'] }}</span>
                                 </li>
@@ -91,7 +91,8 @@
                                     data-aos="fade-up"
                                     data-aos-duration="{{ $duration += $duration }}">
                                     <div class="mr-6 bg-brown px-4 py-6 rounded-full text-natural-white">
-                                        <img class="" style="width: 23px" src="{{ Storage::url($p['icon']) }}" alt="">
+                                        <img class="" style="width: 23px; height: 23px; object-fit: contain !important;"
+                                             src="{{ Storage::url($p['icon']) }}" alt="">
                                     </div>
                                     <span class="font-newOrderRegular tracking-wider">{{ $p['text'] }}</span>
                                 </li>
