@@ -83,23 +83,23 @@
         <div>
             <ul>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular text-sm rounded"
+                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs rounded"
                        href="#">{{ __('ANA SAYFA') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular text-sm font-newOrderRegular  rounded"
+                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs font-newOrderRegular  rounded"
                        href="#">{{ __('KURUMSAL') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular text-sm text-brown rounded"
+                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs text-brown rounded"
                        href="#">{{ __('ÜRÜNLERİMİZ') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular text-sm text-brown rounded"
+                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs text-brown rounded"
                        href="#">{{ __('YEMEK TARİFLERİ') }}</a>
                 </li>
                 <li class="mb-1">
-                    <a class="block p-4 font-newOrderRegular text-sm text-brown rounded"
+                    <a class="block p-4 font-newOrderRegular md:text-sm sm:font-xs text-brown rounded"
                        href="#">{{ __('İLETİŞİM') }}</a>
                 </li>
             </ul>
