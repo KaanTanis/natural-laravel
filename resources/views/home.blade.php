@@ -66,7 +66,7 @@
                             $top = rand(800, 900);
                         }
 
-                        $make = $side . ': -' . rand(0, 40) . 'px; top: -' . $top . 'px; transform: rotate(' . rand(0, 360) . 'deg);';
+                        $make = $side . ': -' . rand(0, 50) . 'px; top: -' . $top . 'px; transform: rotate(' . rand(0, 360) . 'deg);';
                     @endphp
 
                     <img class="piece relative hidden" style="{{ $make }}" width="20" src="/img/piece{{ array_rand($pieces) }}.png" alt="">

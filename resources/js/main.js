@@ -61,8 +61,8 @@ window.addEventListener('DOMContentLoaded', function() {
 // })
 
 // details page
-let hero = document.getElementsByClassName('hero');
-new simpleParallax(hero);
+// let hero = document.getElementsByClassName('hero');
+// new simpleParallax(hero);
 
 let bottom_hero = document.getElementsByClassName('bottom-hero');
 new simpleParallax(bottom_hero, {

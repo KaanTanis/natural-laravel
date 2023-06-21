@@ -61,16 +61,24 @@ class ProductResource extends Resource
                             })
                             ->label(__('Kategori')),
 
-                        Cropper::make('fields.banner')
-                            ->enableImageRotation()
-                            ->rotationalStep(5)
-                            ->enableImageFlipping()
-                            ->enabledAspectRatios([
-                                '16:9'
-                            ])
-                            ->imageCropAspectRatio('16:9')
-                            ->modalSize('md')
+                        Forms\Components\FileUpload::make('fields.banner')
+                            ->image()
+                            ->imageResizeMode('cover')
+                            ->imageCropAspectRatio('16:8')
+                            ->imageResizeTargetWidth(1920)
+                            ->imageResizeTargetHeight(900)
                             ->label(__('Banner')),
+
+//                        Cropper::make('fields.banner')
+//                            ->enableImageRotation()
+//                            ->rotationalStep(5)
+//                            ->enableImageFlipping()
+//                            ->enabledAspectRatios([
+//                                '16:9'
+//                            ])
+//                            ->imageCropAspectRatio('16:9')
+//                            ->modalSize('md')
+//                            ->label(__('Banner')),
 
                         Forms\Components\Fieldset::make('Alan 1')
                             ->schema([
