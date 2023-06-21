@@ -30,8 +30,49 @@
             </button>
         </div>
 
-        <div class="max-w-2xl">
-            <img src="/hero.png" alt="">
+        <div class="max-w-xl">
+            <img class="left-12 relative hero-chef z-10" src="/img/1chef.png" alt="">
+
+            <div class="-mt-32 absolute" id="pieces">
+                @for($i = 0; $i < 55; $i++)
+                    @php
+                        $pieces = [1,2,3,4,5];
+
+                        $side = rand(0, 1) ? 'left' : 'right';
+
+                        if ($i < 5) {
+                            $top = rand(0, 50);
+                        } elseif ($i < 10) {
+                            $top = rand(50, 100);
+                        } elseif ($i < 15) {
+                            $top = rand(150, 200);
+                        } elseif ($i < 20) {
+                            $top = rand(250, 300);
+                        } elseif ($i < 25) {
+                            $top = rand(350, 400);
+                        } elseif ($i < 30) {
+                            $top = rand(450, 500);
+                        } elseif ($i < 35) {
+                            $top = rand(500, 550);
+                        } elseif ($i < 40) {
+                            $top = rand(550, 600);
+                        } elseif ($i < 45) {
+                            $top = rand(650, 700);
+                        } elseif ($i < 50) {
+                            $top = rand(700, 750);
+                        } elseif ($i <= 55) {
+                            $top = rand(750, 800);
+                        } else {
+                            $top = rand(800, 900);
+                        }
+
+                        $make = $side . ': -' . rand(0, 40) . 'px; top: -' . $top . 'px; transform: rotate(' . rand(0, 360) . 'deg);';
+                    @endphp
+
+                    <img class="piece relative hidden" style="{{ $make }}" width="20" src="/img/piece{{ array_rand($pieces) }}.png" alt="">
+                @endfor
+            </div>
+
         </div>
 
     </section>
@@ -125,28 +166,28 @@
     <div class="relative grid grid-cols-2">
         <div class="bg-natural-white relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <img class="w-56" src="/img/tane.png" alt="">
+                <img data-aos="fade-right" class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-wine font-newOrderBold">az yağlı</span>
             </div>
         </div>
 
         <div class="bg-natural-wine relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <img class="w-56" src="/img/tane.png" alt="">
+                <img data-aos="fade-left" class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-white font-newOrderBold">çok cilalı</span>
             </div>
         </div>
 
         <div class="bg-natural-wine relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <img class="w-56" src="/img/tane.png" alt="">
+                <img data-aos="fade-down" class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-white font-newOrderBold">su cilası</span>
             </div>
         </div>
 
         <div class="bg-natural-white relative md:h-96 h-48">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-                <img class="w-56" src="/img/tane.png" alt="">
+                <img data-aos="fade-down" class="w-56" src="/img/tane.png" alt="">
                 <span class="text-lg text-natural-wine font-newOrderBold">orta cila</span>
             </div>
         </div>
@@ -164,7 +205,7 @@
                         kırmızı mercimeği <br>
                         kim keşfetti?
                     </p>
-                    <p class="text-natural-brown text-sm md:px-40 px-10 pt-6 font-newOrderRegular">
+                    <p data-aos="fade-down" class="text-natural-brown text-sm md:px-40 px-10 pt-6 font-newOrderRegular">
                         Kırmızı Mercimek, yoksul bir çiftçi ailesinin kızı olan Asurlu Akubu tarafından
                         yaklaşık 3900-4000 sene önce keşfedilmiştir.
                     </p>
@@ -178,7 +219,7 @@
             </div>
 
             <div class="md:h-[36rem] h-[30rem] pt-12 absolute right-0 overflow-hidden middle-info--bg">
-                <img class="float-right h-full object-contain relative" src="/img/info-bg.png" alt="">
+                <img data-aos="fade-left" class="float-right h-full object-contain relative" src="/img/info-bg.png" alt="">
             </div>
         </div>
     </div>
@@ -191,7 +232,7 @@
         <div class="w-full relative flex items-center justify-center">
             <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                 <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-1000">
-                    <div class="flex flex-shrink-0 relative w-full sm:w-auto md:px-28 md:py-20">
+                    <div data-aos="fade-right" class="flex flex-shrink-0 relative w-full sm:w-auto md:px-28 md:py-20">
                         <div class="flex justify-start mt-44 w-screen">
 {{--                            <div class="absolute md:-mt-72 -mt-12 md:left-32 overflow-hidden"--}}
 {{--                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">--}}
