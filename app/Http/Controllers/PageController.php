@@ -48,7 +48,8 @@ class PageController extends Controller
 
     public function home()
     {
-        return \view('home');
+        $productCategories = Post::query()->where('type', 'product_category')->get();
+        return \view('home', compact('productCategories'));
     }
 
     public function detail($id, $slug = null)

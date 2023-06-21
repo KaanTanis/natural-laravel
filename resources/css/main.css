@@ -91,26 +91,22 @@ body {
 
 @keyframes scatter {
     0% {
-        transform: translateY(-2000%) translateX(-900%);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(0) translateX(40%);
+        transform: translateY(-1250px) translateX(-1600px);
         opacity: 1;
     }
     100% {
-        transform: translateY(100%) translateX(0);
+        transform: translateY(0) translateX(0);
         opacity: 1;
     }
 }
 
 @keyframes hero-chef {
     0% {
-        transform: translateY(-400px) translateX(100px);
+        transform: translateY(-200px) translateX(400px);
         opacity: 1;
     }
     50% {
-        transform: translateY(100px) translateX(-100px);
+        transform: translateY(0) translateX(-20px);
     }
     100% {
         transform: translateY(0) translateX(-20px);
@@ -118,7 +114,7 @@ body {
 }
 
 .hero-chef {
-    animation: hero-chef 0.8s normal forwards;
+    animation: hero-chef 2s normal forwards;
 }
 
 .piece {

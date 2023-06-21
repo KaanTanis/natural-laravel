@@ -43,15 +43,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-window.addEventListener('DOMContentLoaded', function() {
-    var pieces = document.querySelectorAll('.piece');
-    pieces.forEach(function(piece) {
-        var randomDelay = Math.random() * 1; // 0 ila 3 saniye arasında rastgele bir gecikme süresi
-        piece.style.display = 'block';
-        piece.style.animationDelay = randomDelay + 's';
-    });
-});
+// @deprecated
+// window.addEventListener('DOMContentLoaded', function() {
+//     var pieces = document.querySelectorAll('.piece');
+//     pieces.forEach(function(piece) {
+//         var randomDelay = 0; // 0 ila 3 saniye arasında rastgele bir gecikme süresi
+//         piece.style.animationDelay = randomDelay + 's';
+//         piece.style.display = 'block';
+//     });
+// });
 
+// @deprecated
 // document.addEventListener('scroll', function () {
 //     let scroll = window.scrollY;
 //
@@ -61,8 +63,8 @@ window.addEventListener('DOMContentLoaded', function() {
 // })
 
 // details page
-// let hero = document.getElementsByClassName('hero');
-// new simpleParallax(hero);
+let hero = document.getElementsByClassName('home_bottom_banner');
+new simpleParallax(hero);
 
 let bottom_hero = document.getElementsByClassName('bottom-hero');
 new simpleParallax(bottom_hero, {

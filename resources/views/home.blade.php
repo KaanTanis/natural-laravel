@@ -43,33 +43,39 @@
                         if ($i < 5) {
                             $top = rand(0, 50);
                         } elseif ($i < 10) {
-                            $top = rand(50, 100);
+                            $top = rand(50, 120);
                         } elseif ($i < 15) {
-                            $top = rand(150, 200);
+                            $top = rand(200, 240);
                         } elseif ($i < 20) {
-                            $top = rand(250, 300);
+                            $top = rand(300, 350);
                         } elseif ($i < 25) {
-                            $top = rand(350, 400);
-                        } elseif ($i < 30) {
                             $top = rand(450, 500);
+                        } elseif ($i < 30) {
+                            $top = rand(600, 650);
                         } elseif ($i < 35) {
-                            $top = rand(500, 550);
-                        } elseif ($i < 40) {
-                            $top = rand(550, 600);
-                        } elseif ($i < 45) {
-                            $top = rand(650, 700);
-                        } elseif ($i < 50) {
                             $top = rand(700, 750);
-                        } elseif ($i <= 55) {
-                            $top = rand(750, 800);
-                        } else {
+                        } elseif ($i < 40) {
                             $top = rand(800, 900);
+                        } elseif ($i < 45) {
+                            $top = rand(930, 960);
+                        } elseif ($i < 50) {
+                            $top = rand(950, 1000);
+                        } elseif ($i <= 55) {
+                            $top = rand(960, 1000);
+                        } elseif ($i <= 60) {
+                            $top = rand(1100, 1150);
+                        } elseif ($i <= 65) {
+                            $top = rand(1200, 1300);
+                        } elseif ($i <= 70) {
+                            $top = rand(1400, 1500);
+                        } elseif ($i <= 75) {
+                            $top = rand(1500, 1600);
                         }
 
-                        $make = $side . ': -' . rand(0, 50) . 'px; top: -' . $top . 'px; transform: rotate(' . rand(0, 360) . 'deg);';
+                        $make = $side . ': -' . rand(0, 60) . 'px; top: -' . $top . 'px; transform: rotate(' . rand(0, 360) . 'deg);';
                     @endphp
 
-                    <img class="piece relative hidden" style="{{ $make }}" width="20" src="/img/piece{{ array_rand($pieces) }}.png" alt="">
+                    <img class="piece relative " style="{{ $make }}" width="20" src="/img/piece{{ rand(1, 5) }}.png" alt="">
                 @endfor
             </div>
 
@@ -233,45 +239,29 @@
             <div class="w-full h-full mx-auto overflow-x-hidden overflow-y-hidden">
                 <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-1000">
                     <div data-aos="fade-right" class="flex flex-shrink-0 relative w-full sm:w-auto md:px-28 md:py-20">
+
+                        @foreach($productCategories as $productCategory)
                         <div class="flex justify-start mt-44 w-screen">
-{{--                            <div class="absolute md:-mt-72 -mt-12 md:left-32 overflow-hidden"--}}
-{{--                                 style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">--}}
-{{--                            </div>--}}
-
                             <div style="font-size: 64px" class="md:text-5xl z-10 text-3xl md:-right-24 right-0 -top-4 relative text-brown font-newOrderBold">
-                                <p class="mb-8 md:mb-4" style="letter-spacing: 2px">pirinç ve</p>
-                                <p style="letter-spacing: 2px">bakliyat</p>
+                                <p class="mb-8 md:mb-4" style="letter-spacing: 2px">
+                                    {!!
+    // get word count. if word count is bigger than 1, then split the word and add <br> tag between them
+    str_word_count($productCategory->_get('title')) > 1 ? implode('<br>', explode(' ', $productCategory->_get('title'))) : $productCategory->_get('title')
+!!}
+                                </p>
                             </div>
                             <img class="w-96 relative -left-52 md:-left-0" src="/explore.png" alt="">
                             <div class="relative ml-8 mb-6 hidden md:block">
                                 <ul class="bottom-0 absolute font-newOrderBold inline-block w-max text-brown">
-                                    <li>kırmızı mercimek</li>
-                                    <li>nohut</li>
-                                    <li>fasulye</li>
-                                    <li>bulgur</li>
-                                    <li>yeşil mercimek</li>
-                                    <li>pirinç</li>
+                                    @foreach($productCategory->products() as $product)
+                                        <li>
+                                            <a href="{{ route('detail', $product->id) }}">{{ $product->_get('title') }}</a>
+                                        </li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
-
-                        <div class="flex justify-start mt-44 w-screen ml-32">
-                            <div style="font-size: 64px" class="md:text-5xl z-10 text-3xl md:-right-24 right-0 -top-4 relative text-brown font-newOrderBold">
-                                <p class="mb-8 md:mb-4" style="letter-spacing: 2px">pirinç ve</p>
-                                <p style="letter-spacing: 2px">bakliyat</p>
-                            </div>
-                            <img class="w-96 relative -left-52 md:-left-0" src="/explore.png" alt="">
-                            <div class="relative ml-8 mb-6 hidden md:block">
-                                <ul class="bottom-0 absolute font-newOrderBold inline-block w-max text-brown">
-                                    <li>kırmızı mercimek</li>
-                                    <li>nohut</li>
-                                    <li>fasulye</li>
-                                    <li>bulgur</li>
-                                    <li>yeşil mercimek</li>
-                                    <li>pirinç</li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
 
                         <div class="absolute -mt-40 -left-32 overflow-hidden"
                              style="font-size: 430px; z-index: -99; inline-size: -webkit-fill-available;">
@@ -300,15 +290,18 @@
         let defaultTransform = 0;
         function goNext() {
             defaultTransform = defaultTransform - window.screen.width;
-            var slider = document.getElementById("slider");
+            const slider = document.getElementById("slider");
+
             if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
             slider.style.transform = "translateX(" + defaultTransform + "px)";
         }
         next.addEventListener("click", goNext);
         function goPrev() {
-            var slider = document.getElementById("slider");
+            const slider = document.getElementById("slider");
+
             if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
             else defaultTransform = defaultTransform + window.screen.width;
+
             slider.style.transform = "translateX(" + defaultTransform + "px)";
         }
         prev.addEventListener("click", goPrev);
@@ -326,7 +319,7 @@
         bg-natural-green
         container mx-auto h-[14rem] md:h-[30rem] md:mb-36 mb-12 px-3 md:px-0 mt-8 relative">
 
-    <img class="w-full hero mix-blend-multiply" src="/chef.jpg" alt="">
+    <img class="w-full home_bottom_banner mix-blend-multiply" src="/chef.jpg" alt="">
 
     <div class="
             md:text-7xl text-4xl font-newOrderBold text-white
