@@ -95,6 +95,10 @@ class AppServiceProvider extends ServiceProvider
         if (Schema::hasTable('posts')) {
             view()->share('settings', Post::query()->where('id', 2)->first());
             view()->share('homeField', Post::query()->where('id', 1)->first());
+
+            view()->share('corporatePages', Post::query()->where('type', 'page')
+                ->where('status', true)
+                ->get());
         }
     }
 }

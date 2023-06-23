@@ -37,7 +37,20 @@
         <li><a class="text-sm text-brown px-1 duration-200
             {{ request()->routeIs('home') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="/">{{ __('ANA SAYFA') }}</a></li>
-        <li><a class="text-sm text-brown font-newOrderLight px-1 duration-200" href="#">{{ __('KURUMSAL') }}</a></li>
+        <li class="group">
+            <a class="text-sm text-brown font-newOrderLight px-1" href="javascript:;">
+                {{ __('KURUMSAL') }}
+            </a>
+            <ul class="absolute py-2 bg-natural-brown-2 rounded-b-2xl font-newOrderRegular hidden group-hover:block rounded-r-2xl w-36 shadow-sm">
+                @foreach($corporatePages as $corporate)
+                    <li class="px-3 py-1">
+                        <a class="text-natural-brown
+                        text-sm hover:underline decoration-brown-100/[.33]
+                        font-bold" href="{{ route('page', $corporate->id) }}">{{ $corporate->_get('title') }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        </li>
         <li><a class="text-sm text-brown  px-1 duration-200
             {{ request()->routeIs('detail') || request()->routeIs('products') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="{{ route('products') }}">{{ __('ÜRÜNLERİMİZ') }}</a></li>
@@ -64,6 +77,8 @@
     <a class="hidden lg:inline-block py-2 px-2 text-sm font-newOrderRegular rounded-xl text-brown transition duration-200"
        href="#">AR</a>
 </nav>
+
+<div class="clear-both"></div>
 
 <div class="navbar-menu relative z-50 hidden">
     <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
