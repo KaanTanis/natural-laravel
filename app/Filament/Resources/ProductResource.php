@@ -116,8 +116,7 @@ class ProductResource extends Resource
                                     ->label(__('Yazı ilk satır')),
                                 Forms\Components\TextInput::make('fields.alt_banner_text_2.'.$lang)
                                     ->label(__('Yazı ikinci satır')),
-                                Cropper::make('fields.alt_banner_img')
-                                    ->modalSize('md')
+                                Forms\Components\FileUpload::make('fields.alt_banner_img')
                                     ->label(__('Görsel')),
                                 Forms\Components\ColorPicker::make('fields.alt_banner_color')
                                     ->label(__('Yazı Arkaplan Rengi')),

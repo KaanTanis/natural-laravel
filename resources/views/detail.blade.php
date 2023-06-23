@@ -5,7 +5,7 @@
     <section id="hero" class="
         container mx-auto h-[14rem] md:h-auto md:mb-36 mb-12 px-3 md:px-0 mt-8 relative">
 
-        <img class="w-full rounded-2xl" src="{{ Storage::url($product->_get('banner')) }}" alt="">
+        <img class="w-full rounded-2xl bottom-hero" src="{{ Storage::url($product->_get('banner')) }}" alt="">
 
 {{--        <div class="bg-center bg-cover hero rounded-2xl absolute"--}}
 {{--                 style="--}}
