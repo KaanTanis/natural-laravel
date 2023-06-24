@@ -250,7 +250,8 @@
 !!}
                                 </p>
                             </div>
-                            <img class="w-96 relative -left-52 md:-left-0" src="/explore.png" alt="">
+                            <img class="w-96 relative -left-52 md:-left-0" src="
+                            {{ Storage::url($productCategory->_get('image')) }}" alt="">
                             <div class="relative ml-8 mb-6 hidden md:block">
                                 <ul class="bottom-0 absolute font-newOrderBold inline-block w-max text-brown">
                                     @foreach($productCategory->products() as $product)

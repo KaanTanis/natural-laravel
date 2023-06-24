@@ -43,7 +43,11 @@ class PageController extends Controller
             ])->setStatusCode(301);
         }
 
-        return view('page', compact('data'));
+        $otherPages = Post::query()
+//            ->where('id', '!=', $data->id)
+            ->where('type', $data->type)->where('status', true)->get();
+
+        return view('page', compact('data', 'otherPages'));
     }
 
     public function home()

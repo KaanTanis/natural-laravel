@@ -13,6 +13,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Guava\FilamentIconPicker\Forms\IconPicker;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
@@ -29,12 +30,12 @@ class PageResource extends Resource
 
     public static function getLabel(): ?string
     {
-        return __('Sayfa');
+        return __('Kurumsal Sayfa');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('Sayfalar');
+        return __('Kurumsal Sayfalar');
     }
 
     protected static ?string $slug = 'pages';
@@ -74,37 +75,34 @@ class PageResource extends Resource
                         Forms\Components\Tabs::make('locale')
                             ->schema($translatableFields),
 
-                        Forms\Components\Section::make(__('Galeri'))
+                        Forms\Components\Section::make('icon')
                             ->schema([
-                                Forms\Components\FileUpload::make('fields.images')
-                                    ->enableReordering()
-                                    ->multiple()
-                                    ->label(''),
-                            ])->collapsible(),
+                                IconPicker::make('fields.icon')
+                                    ->required()
+                                    ->label(__('İkon'))
+                            ])
+
+//                        Forms\Components\Section::make(__('Galeri'))
+//                            ->schema([
+//                                Forms\Components\FileUpload::make('fields.images')
+//                                    ->enableReordering()
+//                                    ->multiple()
+//                                    ->label(''),
+//                            ])->collapsible(),
                     ])
                     ->inlineLabel(false)
                     ->columnSpan(2),
 
                 Forms\Components\Group::make()
                     ->schema([
-                        Forms\Components\Section::make(__('Kapak Görseli'))
-                            ->schema([
-                                Cropper::make('fields.cover')
-                                    ->imageCropAspectRatio('16:12')
-                                    ->enableImageRotation()
-                                    ->rotationalStep(5)
-                                    ->enableImageFlipping()
-                                    ->label(''),
-                            ]),
+//                        Forms\Components\Section::make(__('Kapak Görseli'))
+//                            ->schema([
+//                                Forms\Components\FileUpload::make('fields.cover'),
+//                            ]),
 
                         Forms\Components\Section::make(__('Banner Görseli'))
                             ->schema([
-                                Cropper::make('fields.banner')
-                                    ->imageCropAspectRatio('14:3')
-                                    ->enableImageRotation()
-                                    ->rotationalStep(5)
-                                    ->enableImageFlipping()
-                                    ->label(''),
+                                Forms\Components\FileUpload::make('fields.banner'),
                             ]),
 
                         Forms\Components\Section::make(__('Görünürlük'))
@@ -146,7 +144,7 @@ class PageResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+//                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
