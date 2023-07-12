@@ -47,23 +47,21 @@
             <div class="md:col-start-2 font-newOrderRegular webkit-center">
                 <x-heroicon-s-location-marker class="w-8 text-brown"></x-heroicon-s-location-marker>
                 <p class="mt-4 text-brown font-newOrderRegular text-[13px]">
-                    Çilek Mah. 6394 Sk. No:4
-                    <br>
-                    Akdeniz / MERSİN
+                    {{ $settings->_get('address') }}
                 </p>
             </div>
 
             <div class="font-newOrderRegular webkit-center">
                 <x-heroicon-s-phone class="w-8 text-brown"></x-heroicon-s-phone>
                 <p class="mt-4 text-brown font-newOrderRegular text-[13px]">
-                    +90 324 221 37 87
+                    {{ $settings->_get('phone') }}
                 </p>
             </div>
 
             <div class="font-newOrderRegular webkit-center">
                 <x-heroicon-s-mail class="w-8 text-brown"></x-heroicon-s-mail>
                 <p class="mt-4 text-brown font-newOrderRegular text-[13px]">
-                    natural@naturalgida.com.tr
+                    {{ $settings->_get('email') }}
                 </p>
             </div>
         </div>

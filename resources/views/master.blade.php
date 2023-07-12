@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <title>Document</title>
+    <title>{{ $settings->_get('title') }}</title>
 </head>
 <body>
 <script>
@@ -26,7 +26,7 @@
 
 <nav class="relative container px-5 md:px-0 mx-auto py-8 flex justify-between items-center bg-transparent">
     <a class="" href="/">
-        <img width="140" src="/logo.png" alt="">
+        <img width="140" src="{{ Storage::url($settings->_get('logo')) }}" alt="">
     </a>
     <div class="lg:hidden">
         <button class="navbar-burger flex items-center text-blue-600 p-3">
@@ -42,7 +42,7 @@
         " href="/">{{ __('ANA SAYFA') }}</a></li>
 
         <li><a class="text-sm text-brown px-1 duration-200
-            {{ request()->routeIs('home') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
+            {{ request()->routeIs('page') ? 'font-newOrderRegular font-bold' : 'font-newOrderLight'}}
         " href="{{ route('page', 20) }}">{{ __('KURUMSAL') }}</a></li>
 
 {{--        <li class="group">--}}
@@ -93,7 +93,7 @@
     <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
         <div class="flex items-center mb-8">
             <a class="mr-auto text-3xl font-bold leading-none" href="/">
-                <img width="140" src="/logo.png" alt="">
+                <img width="140" src="{{ Storage::url($settings->_get('logo')) }}" alt="">
             </a>
             <button class="navbar-close">
                 <svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@
 <section id="footer" class="bg-brown">
     <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-3 container mx-auto relative py-24 px-12">
         <div class="justify-self-center mb-5">
-            <img width="190" src="/logo-light.png" alt="">
+            <img width="190" src="{{ Storage::url($settings->_get('light_logo')) }}" alt="">
         </div>
         <div class="mb-5">
             <ul class="text-natural-brown-2 font-newOrderRegular">
@@ -164,9 +164,9 @@
         </div>
         <div>
             <ul class="text-natural-brown-2 font-newOrderRegular">
-                <li class="mb-3">Çilek Mah. 6394 Sk. No:4 Akdeniz / MERSİN</li>
-                <li class="mb-3">natural@naturalgida.com.tr</li>
-                <li class="mb-3">+90 324 221 37 87</li>
+                <li class="mb-3">{{ $settings->_get('address') }}</li>
+                <li class="mb-3">{{ $settings->_get('email') }}</li>
+                <li class="mb-3">{{ $settings->_get('phone') }}</li>
             </ul>
         </div>
     </div>

@@ -2,46 +2,39 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\BlogResource\Pages;
-use App\Filament\Resources\BlogResource\RelationManagers;
+use App\Filament\Resources\OtherPageResource\Pages;
+use App\Filament\Resources\OtherPageResource\RelationManagers;
 use App\Helpers\Helper;
+use App\Models\OtherPage;
 use App\Models\Post;
-use App\Models\User;
-use Camya\Filament\Forms\Components\TitleWithSlugInput;
 use Filament\Forms;
 use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Guava\FilamentIconPicker\Forms\IconPicker;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 use Nuhel\FilamentCropper\Components\Cropper;
 
-class BlogResource extends Resource
+class OtherPageResource extends Resource
 {
     protected static ?string $model = Post::class;
 
-    protected static bool $shouldRegisterNavigation = false;
-
-    protected static ?string $navigationIcon = 'heroicon-o-pencil';
-
-    public function modelType(): string
-    {
-        return 'blog';
-    }
+    protected static ?string $slug = 'other_pages';
 
     public static function getLabel(): ?string
     {
-        return __('Blog');
+        return __('Diğer Sayfalar');
     }
 
     public static function getPluralLabel(): ?string
     {
-        return __('Bloglar');
+        return __('Diğer Sayfalar');
     }
 
-    protected static ?string $slug = 'blog';
+    protected static ?string $navigationIcon = 'heroicon-o-collection';
 
     public static function form(Form $form): Form
     {
@@ -69,7 +62,7 @@ class BlogResource extends Resource
 
         return $form
             ->schema([
-                Forms\Components\Hidden::make('type')->default('blog'),
+                Forms\Components\Hidden::make('type')->default('other_pages'),
 
                 Forms\Components\Group::make()
                     ->schema([
@@ -79,52 +72,32 @@ class BlogResource extends Resource
                         Forms\Components\Section::make(__('Galeri'))
                             ->schema([
                                 Forms\Components\FileUpload::make('fields.images')
+                                    ->enableReordering()
+                                    ->multiple()
                                     ->label(''),
                             ])->collapsible(),
                     ])
-                        ->inlineLabel(false)
-                        ->columnSpan(2),
+                    ->inlineLabel(false)
+                    ->columnSpan(2),
 
                 Forms\Components\Group::make()
                     ->schema([
-                        Forms\Components\Section::make(__('Durum'))
-                            ->schema([
-                                Forms\Components\Toggle::make('status')
-                                    ->default(true)
-                                    ->label(__('Görünürlük'))
-                                    ->helperText(__('Daha sonra düzenleyip yayınlayabilirsiniz. Görünürlük kapalı olursa, ziyaretçiler göremez.')),
-                            ]),
-
-                        Forms\Components\Section::make(__('Yazar'))
-                            ->schema([
-                                Forms\Components\Select::make('fields.user_id')
-                                    ->label(__('Yazar'))
-                                    ->options(function () {
-                                        return User::all()->pluck('name', 'id');
-                                    })->default(auth()->id()),
-                            ]),
-
-
-                        Forms\Components\Section::make(__('Kapak Görseli'))
-                            ->schema([
-                                Cropper::make('fields.cover')
-                                    ->imageCropAspectRatio('16:12')
-                                    ->enableImageRotation()
-                                    ->rotationalStep(5)
-                                    ->enableImageFlipping()
-                                    ->label(''),
-                            ]),
-
                         Forms\Components\Section::make(__('Banner Görseli'))
                             ->schema([
-                                Cropper::make('fields.banner')
-                                    ->imageCropAspectRatio('14:3')
-                                    ->enableImageRotation()
-                                    ->rotationalStep(5)
-                                    ->enableImageFlipping()
-                                    ->label(''),
+                                Forms\Components\FileUpload::make('fields.banner'),
                             ]),
-                    ])->columnSpan(1)->inlineLabel(false)
+
+                        Forms\Components\Section::make(__('Yan Görsel'))
+                            ->schema([
+                                Forms\Components\FileUpload::make('fields.side_banner'),
+                            ]),
+
+                        Forms\Components\Section::make(__('Görünürlük'))
+                            ->schema([
+                                Forms\Components\Toggle::make('status')
+                                    ->label(__('Aktif'))
+                            ]),
+                    ])->columnSpan(1)->inlineLabel(false),
             ])->columns(3);
     }
 
@@ -143,10 +116,8 @@ class BlogResource extends Resource
                     })
                     ->label(__('Başlık')),
 
-                Tables\Columns\IconColumn::make('status')
-                    ->boolean()
-                    ->sortable()
-                    ->label(__('Görünürlük')),
+                Tables\Columns\ToggleColumn::make('status')
+                    ->label(__('Aktif')),
             ])
             ->filters([
                 Tables\Filters\SelectFilter::make('status')
@@ -160,7 +131,7 @@ class BlogResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+//                Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
 
@@ -174,9 +145,9 @@ class BlogResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBlogs::route('/'),
-            'create' => Pages\CreateBlog::route('/create'),
-            'edit' => Pages\EditBlog::route('/{record}/edit'),
+            'index' => Pages\ListOtherPages::route('/'),
+            'create' => Pages\CreateOtherPage::route('/create'),
+            'edit' => Pages\EditOtherPage::route('/{record}/edit'),
         ];
     }
 }

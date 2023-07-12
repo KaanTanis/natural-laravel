@@ -69,10 +69,10 @@ class AppServiceProvider extends ServiceProvider
             ]);
 
             Filament::registerNavigationItems([
-                NavigationItem::make(__('Ana Sayfa Alanları'))
-                    ->icon('heroicon-o-adjustments')
-                    ->url(route('filament.resources.home-field.edit', 1))
-                    ->isActiveWhen(fn () => request()->routeIs('filament.resources.home-field.edit')),
+//                NavigationItem::make(__('Ana Sayfa Alanları'))
+//                    ->icon('heroicon-o-adjustments')
+//                    ->url(route('filament.resources.home-field.edit', 1))
+//                    ->isActiveWhen(fn () => request()->routeIs('filament.resources.home-field.edit')),
 
                 NavigationItem::make(__('Site Ayarları'))
                     ->icon('heroicon-o-cog')

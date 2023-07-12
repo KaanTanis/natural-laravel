@@ -216,7 +216,7 @@
                         yaklaşık 3900-4000 sene önce keşfedilmiştir.
                     </p>
                     <div class="mt-8">
-                        <a href="javascript:;" class="bg-natural-brown-light hover:bg-natural-brown hover:text-natural-brown-light rounded-xl py-4 px-8
+                        <a href="{{ route('page', 23) }}" class="bg-natural-brown-light hover:bg-natural-brown hover:text-natural-brown-light rounded-xl py-4 px-8
                             text-natural-brown ">
                             devamını oku
                         </a>
@@ -328,41 +328,34 @@
             absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         yemek tarifleri
     </div>
+
+    <div class="bottom-arrow"></div>
+
+    <x-bi-arrow-down-short
+        class="absolute font-bold -bottom-3 left-0 right-0 mx-auto my-0 w-8 h-auto text-brown">
+    </x-bi-arrow-down-short>
 </section>
 
 <section>
-    <div class="flex mt-44 relative container mx-auto mb-36 w-full">
-        <div class="absolute -mt-24 -left-32 overflow-hidden -z-20 text-[430px]" style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important; inline-size: -webkit-fill-available;">
-            yemektarifleri
+    <div class="absolute -mt-32 overflow-hidden -z-20 text-[430px]"
+         style="text-shadow: 0 0 1px #2a2a2a; color: #FFF7ED !important; inline-size: -webkit-fill-available;">
+        yemektarifleri
+    </div>
+    <div class="flex mt-44 relative container mx-auto mb-36 w-full justify-center">
+
+        <div class="gap-12 md:px-24 grid md:grid-cols-4 grid-cols-1 flex-nowrap whitespace-nowrap">
+            @foreach($recipes as $recipe)
+            <div class="h-96 rounded-full relative text-center mt-24 md:mt-0">
+                <img class="object-cover h-full rounded-full" src="{{ Storage::url($recipe->_get('cover')) }}" alt="">
+                <div>
+                    <span class="font-newOrderBold block mt-8 mb-6 text-center w-full">{{ $recipe->_get('title') }}</span>
+                    <a href="#" class="px-4 rounded-md py-1 bg-natural-brown-dark mt-4 text-white text-xs font-newOrderBold">{{ __('TARİF') }}</a>
+                </div>
+            </div>
+            @endforeach
         </div>
 
-        <div class="gap-9 grid grid-cols-5 flex-nowrap whitespace-nowrap">
-            <div class="h-96 bg-natural-green rounded-full relative">
-                <span class="font-newOrderRegular absolute -top-12 text-center w-full">içli köfte</span>
-                <img class="object-cover h-full rounded-full" src="/foods/kofte.png" alt="">
-            </div>
 
-            <div class="h-96 mt-24 bg-natural-green rounded-full relative">
-                <span class="font-newOrderRegular absolute -top-12 text-center w-full">kısır</span>
-                <img class="object-cover h-full rounded-full" src="/foods/kisir.png" alt="">
-            </div>
-
-            <div class="h-96 bg-natural-green rounded-full relative">
-                <span class="font-newOrderRegular absolute -top-12 text-center w-full">kuru fasulye</span>
-                <img class="object-cover h-full rounded-full" src="/foods/fasulye.png" alt="">
-            </div>
-
-            <div class="h-96 mt-24 bg-natural-green rounded-full relative">
-                <span class="font-newOrderRegular absolute -top-12 text-center w-full">pilav</span>
-                <img class="object-cover h-full rounded-full" src="/foods/pilav.png" alt="">
-            </div>
-
-            <div class="h-96 bg-natural-green rounded-full relative">
-                <span class="font-newOrderRegular absolute -top-12 text-center w-full">mercimek çorbası</span>
-                <img class="object-cover h-full rounded-full" src="/foods/corba.png" alt="">
-            </div>
-
-        </div>
     </div>
 </section>
 

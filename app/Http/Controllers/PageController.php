@@ -23,7 +23,8 @@ class PageController extends Controller
     {
         $data = Post::query()
             ->where(function ($query) {
-                $query->where('type', 'page');
+                $query->where('type', 'other_pages')
+                    ->orWhere('type', 'page');
 
                 $resources = collect(Filament::getResources());
 
@@ -47,13 +48,22 @@ class PageController extends Controller
 //            ->where('id', '!=', $data->id)
             ->where('type', $data->type)->where('status', true)->get();
 
+        if ((bool)$data->status == false) {
+            abort(404);
+        }
+
+        if ($data->type == 'other_pages') {
+            return view('other-pages', compact('data', 'otherPages'));
+        }
+
         return view('page', compact('data', 'otherPages'));
     }
 
     public function home()
     {
         $productCategories = Post::query()->where('type', 'product_category')->get();
-        return \view('home', compact('productCategories'));
+        $recipes = Post::query()->where('type', 'recipe')->get();
+        return \view('home', compact('productCategories', 'recipes'));
     }
 
     public function detail($id, $slug = null)

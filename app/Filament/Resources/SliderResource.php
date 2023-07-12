@@ -24,6 +24,8 @@ class SliderResource extends Resource
 {
     protected static ?string $model = Post::class;
 
+    protected static bool $shouldRegisterNavigation = false;
+
     protected static ?string $slug = 'slider';
 
     public static function getLabel(): ?string
